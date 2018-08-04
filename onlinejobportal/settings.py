@@ -25,7 +25,7 @@ SECRET_KEY = '*&)71!z^y(l(u-z0$+_xjw=keoe%vhwb7q8)b=311w02)&!qm*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True #defaultly it is true
 
-ALLOWED_HOSTS = ['onlinejobportal.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['ojp65.herokuapp.com','127.0.0.1']
 
 
 # Application definition
