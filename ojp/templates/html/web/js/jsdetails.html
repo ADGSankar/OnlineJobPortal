@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static "Pages/assets/img/apple-icon.png" %}">
+  <link rel="icon" type="image/png" href="{% static "Pages/assets/img/favicon.png" %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+  OJP
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="{% static "Pages/assets/css/bootstrap.min.css" %}" rel="stylesheet"  />
+  <link href="{% static "Pages/assets/css/now-ui-dashboard.css" %}"?v=1.1.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{% static "Pages/assets/demo/demo.css" %}" rel="stylesheet" />
+</head>
+
+<body class="">
+      <div class="content">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header">
+                <h5 align="center" class="title">Edit Profile</h5>
+              </div>
+              <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <hr>
+                  <p class="title">Personal Details</p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Email</label>
+                        <!--<input type="text" class="form-control" placeholder="Last Name" value="Andrew">-->
+                        {{ form.email}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Moble No.</label>
+                        <!--<input type="text" class="form-control" placeholder="Last Name" value="Andrew">-->
+                        {{ form.mobile}}
+                      </div>
+                    </div>
+                  </div>
+                   <div class="row">
+                    <div class="col-md-4">
+                      <label>Profile Image</label>
+                      {{ form.dp }}
+                    </div>
+                  <div class="col-md-4">
+                      <label>Resume</label>
+                      {{ form.resume }}
+                    </div>
+                   </div>
+
+                  <hr>
+                  <p class="title">Schooling Details</p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>School Name</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.t_school}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Passed Year</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.t_pyear}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>GPA</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.t_gpa}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  <a href="#" class="btn btn-primary btn-block" target="_blank" >Marks to GPA converter</a>
+                </div>
+                  <div class="col-md-4"></div>
+            </div>
+                  <hr>
+                  <p class="title">Under Graduation Details</p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Qualification</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.ird_type}}
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label>College Name</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.ird_clz_name}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Passed Year</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.ird_pyear}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Percentage</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.ird_percentage}}
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p class="title">Under Graduation Details</p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Qualification</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h1_type}}
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label>College/University Name</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h1_clz_name}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Specilization</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h1_specilization}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Passed Year</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h1_pyear}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Percentage</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h1_percentage}}
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <p class="title">Post Graduation Details</p>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Qualification</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h2_type}}
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <label>College/University Name</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h2_clz_name}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Specilization</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h2_specilization}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Passed Year</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h2_pyear}}
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label>Percentage</label>
+                        <!--<input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">-->
+                        {{form.h2_percentage}}
+                      </div>
+                    </div>
+                  </div>
+                                  <div class="row">
+                  <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  <button class="btn btn-primary btn-block">
+                    Contonue..
+                  </button>
+                </div>
+
+                  <div class="col-md-4"></div>
+              </div>
+                </form>
+                <hr>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <nav>
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="http://presentation.creative-tim.com">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, Designed by
+            <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+          </div>
+        </div>
+      </footer>
+
+    <!--   Core JS Files   -->
+  <script src="{% static 'Pages/assets/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'Pages/assets/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'Pages/assets/js/core/bootstrap.min.js' %}"></script>
+  <script src="{% static 'Pages/assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="{% static 'Pages/assets/js/plugins/chartjs.min.js' %}"></script>
+  <!--  Notifications Plugin    -->
+  <script src="{% static 'Pages/assets/js/plugins/bootstrap-notify.js' %}"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{% static 'Pages/assets/js/now-ui-dashboard.min.js' %}   ?v=1.1.0" type="text/javascript"></script>
+  <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{% static 'Pages/assets/demo/demo.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+    <div class="sidebar" data-color="orange">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          OJP
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          Online Job Portal
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li >
+            <a href="{% url 'ojp:jphome' %}">
+              <i class="now-ui-icons design_app"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+            <li >
+            <a href="{% url 'ojp:jpprofile' request.user.username %}">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Company Profile</p>
+            </a>
+          </li>
+          <li >
+            <a href="{% url 'ojp:jppj' %}">
+              <i class="now-ui-icons education_agenda-bookmark"></i>
+              <p>Post Jobs</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'ojp:jpvac' %}">
+              <i class="now-ui-icons files_paper"></i>
+              <p>Select Candidates</p>
+            </a>
+          </li>
+          <li>
+            <a href="./map.html">
+              <i class="now-ui-icons travel_info"></i>
+              <p>Help Desk</p>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'ojp:jplogout' %}">
+              <i class="now-ui-icons media-1_button-power"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>

@@ -1,0 +1,13 @@
+<div class="dropdown-menu dropdown-menu-right card-body">
+                          <div class="card-body">
+                            <div class="author">
+                              <a href="#">
+                                <img class="avatar border-gray" src="{{ jsd.dp.url }}" alt="...">
+                              </a>
+                                <h5 class="title" style="text-align:center;">{{ req.user.username }}</h5>
+                                        <a href="{% url 'ojp:jsledit' %}" class="btn btn-primary btn-block">Edit Profile</a>
+                                      <a href="{% url 'ojp:jslogout' %}" class="btn btn-primary btn-block">Logout</a>
+
+                            </div>
+                          </div>
+</div>
