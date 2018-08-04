@@ -298,10 +298,9 @@ class JobSeekersDetailss(LoginRequiredMixin,View):
     redirect_field_name = 'redirect_to'
     def get(self,request):
         form = JobSeekerDetails1
-        jsd = JobSeekerDetails.objects.filter(jobseeker=request.user)
         return render(request,
             template_name=r"web/js/jsdetails.html",
-            context={'form': form,'jsd':jsd[0]}
+            context={'form': form,}
         )
     def post(self, request, *args, **kwargs):
         jsd=JobSeekerDetails()
